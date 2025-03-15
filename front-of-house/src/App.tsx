@@ -1,10 +1,31 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import { getWindowDimensions, useMousePosition } from './hooks/hooks';
 import './App.css';
 
 function App() {
+  const mousePosition = useMousePosition();
+  const dimensions: object = getWindowDimensions();
+
+  const windowWidthPercentage: number = mousePosition.x / dimensions.width;
+  const opacity: string = (
+    Math.round(windowWidthPercentage * 100) / 100
+  ).toString();
+
   return (
-    <>
+    <div
+      className="container"
+      style={{
+        backgroundColor: `rgba(52, 52, 52, ${opacity}`,
+      }}
+    >
+      <p>
+        Your cursor position:
+        <br />
+        {JSON.stringify(mousePosition)}
+        {opacity}
+      </p>
+
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer noopener">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -22,7 +43,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </div>
   );
 }
 
