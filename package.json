@@ -1,0 +1,24 @@
+{
+  "name": "tbd-stills",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbd-stills/tbd-stills.git"
+  },
+  "workspaces": [
+    "front-of-house",
+    "back-of-house"
+  ],
+  "keywords": [],
+  "author": "trevor hauter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbd-stills/tbd-stills/issues"
+  },
+  "homepage": "https://github.com/tbd-stills/tbd-stills#readme"
+}
