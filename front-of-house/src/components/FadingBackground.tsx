@@ -8,7 +8,7 @@ interface Source {
 
 export default function FadingCover(props: Source) {
   const mousePosition = useMousePosition();
-  const dimensions: object = getWindowDimensions();
+  const dimensions = getWindowDimensions();
 
   const windowWidthPercentage: number = mousePosition.x / dimensions.width;
   const opacity: string = (
