@@ -13,13 +13,13 @@ export default tseslint.config(
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
     ],
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,ts,tsx}'],
     
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ['./front-of-house/tsconfig.node.json', './front-of-house/tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
