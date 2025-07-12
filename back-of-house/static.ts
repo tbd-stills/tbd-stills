@@ -2,14 +2,19 @@
 
 // ESM
 import Fastify from 'fastify';
+import fastifyStatic from '@fastify/static';
+import path from 'node:path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const fastify = Fastify({
   logger: true,
 });
 
-// Declare a route
-fastify.get('/', function (request, reply) {
-  reply.send({ hello: 'world' });
+fastify.register(fastifyStatic, {
+  root: path.join(__dirname, 'dist'),
 });
 
 // Run the server!

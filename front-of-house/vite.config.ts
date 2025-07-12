@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [react(), checker({
     typescript: true,
   })],
+  build: {
+    outDir: '../back-of-house/dist',
+  },
 });

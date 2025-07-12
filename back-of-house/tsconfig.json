@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     // project options
+    "module": "es2022",
     "lib": [
       "ESNext",
       "dom"
