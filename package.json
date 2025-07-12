@@ -9,9 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node back-of-house/static.ts --workspace=back-of-house",
-    "build": "npm run build --workspace=front-of-house",
     "dev": "npm run dev --worksapce=front-of-house",
-    "start": "npm run server"
+    "start": "npm run server",
+    "postinstall": "npm run build --workspace=front-of-house"
   },
   "repository": {
     "type": "git",
