@@ -6,12 +6,13 @@ import '../components/FadingDiv.css';
 function getPercentage(inverted: boolean, percent: number) {
   if (inverted) {
     return 1 - Math.round(percent * 100) / 100;
-  } else {
+  }
+  else {
     return Math.round(percent * 100) / 100;
   }
 }
 
-export default function FadingDiv({ inverted = false, children }: { inverted: boolean, children: React.ReactNode }) {
+export default function FadingDiv({ inverted = false, children }: { inverted: boolean; children: React.ReactNode }) {
   const mousePosition = useMousePosition();
   const dimensions = getWindowDimensions();
 
