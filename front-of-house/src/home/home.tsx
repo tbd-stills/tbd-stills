@@ -1,4 +1,5 @@
 import FadingDiv from '../components/FadingDiv';
+import TypeWriter from '../components/TypeWriter';
 
 import homeBackground from '../assets/homeBackground.jpg';
 import '../home/home.css';
@@ -14,6 +15,7 @@ function Home() {
         <FadingDiv inverted={true}>
           <h1>coming soon...</h1>
         </FadingDiv>
+        <TypeWriter text="Made by humans, with love" />
       </div>
     </div>
   );
