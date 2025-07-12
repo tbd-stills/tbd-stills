@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/tbd-stills/tbd-stills/issues"
   },
-  "homepage": "https://github.com/tbd-stills/tbd-stills#readme"
+  "homepage": "https://github.com/tbd-stills/tbd-stills#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@stylistic/eslint-plugin": "^5.1.0",
+    "eslint": "^9.31.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0"
+  }
 }
