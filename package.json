@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/tbd-stills/tbd-stills/issues"
   },
-  "homepage": "https://github.com/tbd-stills/tbd-stills#readme"
+  "homepage": "https://github.com/tbd-stills/tbd-stills#readme",
+  "dependencies": {
+    "vite-plugin-checker": "^0.10.0"
+  }
 }
