@@ -26,14 +26,15 @@ export default function RotatingTypeWriter({ phrases }: { phrases: string[] }) {
   // 3. when the first word is deleted, start the second
   // 4. do this until we are at the last word
   // 5. when we are at the last word, restart!
-  const waitTime = 5000;
+  const displayTime = 5000;
+  const timeBetweenPhrases = 1000;
 
   function onComplete() {
     setTimeout(function () {
       setCurrentPhrase((prev) => {
         return { text: phrases[getNextPhrase(prev.text, phrases, !prev.isDeleting)], isDeleting: !prev.isDeleting };
       });
-    }, waitTime);
+    }, currentPhrase.isDeleting ? timeBetweenPhrases : displayTime);
   };
 
   return (
