@@ -15,6 +15,12 @@
   position: fixed;
   width: 100%;
   z-index: -1;
+  transition: -webkit-filter 2s, filter 2s;
+}
+
+.cover.unblur {
+  -webkit-filter: blur(0);
+  filter: blur(0);
 }
 
 .television-container {

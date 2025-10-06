@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <div style={{ height: '100%', width: '100%' }}>
-      <img className="cover" src={homeBackground} />
+      <img className={`cover ${isTVHidden ? 'unblur' : ''}`} src={homeBackground} />
       <div className="home-container">
         <div className={`home-television-wrapper ${isTVHidden ? 'tv-hidden' : ''}`}>
           {((isTVHidden && !animationIsOngoing) || (!isTypewriterHidden && animationIsOngoing))
