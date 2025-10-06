@@ -44,7 +44,7 @@ function Home() {
               )
             : (
                 <Television>
-                  <video autoPlay muted>
+                  <video playsInline autoPlay muted>
                     <source src="https://res.cloudinary.com/djxvt5rzr/video/upload/v1759704292/coming_soon_zwlowm.mov" type="video/mp4" />
                     Your browser does not support HTML video.
                   </video>
