@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 import FadingDiv from '../components/FadingDiv';
-import RotatingTypeWriter from '../components/RotatingTypeWriter';
+import RotatingTypewriter from '../components/RotatingTypewriter';
 import { homePagePhrases } from '../constants';
 import Television from '../components/Television';
 
 import homeBackground from '../assets/homeBackground.jpg';
-import '../home/home.css';
+import '../home/Home.css';
 
 function Home() {
   const [isTVHidden, setIsTVHidden] = useState(false);
@@ -39,7 +39,7 @@ function Home() {
                   <FadingDiv inverted={true}>
                     <h1>coming soon...</h1>
                   </FadingDiv>
-                  <RotatingTypeWriter phrases={homePagePhrases} />
+                  <RotatingTypewriter phrases={homePagePhrases} />
                 </>
               )
             : (

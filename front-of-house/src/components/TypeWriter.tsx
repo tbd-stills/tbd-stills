@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function getTypeWriterSubString(text: string, index: number, isDeleting: boolean): string {
+function getTypewriterSubstring(text: string, index: number, isDeleting: boolean): string {
   if (isDeleting) {
     return text.substring(0, text.length - index);
   }
@@ -9,7 +9,7 @@ function getTypeWriterSubString(text: string, index: number, isDeleting: boolean
   }
 };
 
-export default function TypeWriter(
+export default function Typewriter(
   { text, isDeleting, onComplete }: { text: string; isDeleting: boolean; onComplete: () => void },
 ) {
   const [currentText, setCurrentText] = useState('');
@@ -20,7 +20,7 @@ export default function TypeWriter(
     console.log('writing');
     for (let index = 1; index < text.length + 1; index++) {
       setTimeout(function () {
-        setCurrentText(getTypeWriterSubString(text, index, isDeleting));
+        setCurrentText(getTypewriterSubstring(text, index, isDeleting));
         if (index == text.length) {
           onComplete();
         }

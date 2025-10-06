@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import TypeWriter from './TypeWriter';
+import Typewriter from './Typewriter';
 
 function getNextPhrase(currentPhrase: string, phrases: string[], isDeleting: boolean) {
   if (isDeleting) {
@@ -14,7 +14,7 @@ function getNextPhrase(currentPhrase: string, phrases: string[], isDeleting: boo
   }
 }
 
-export default function RotatingTypeWriter({ phrases }: { phrases: string[] }) {
+export default function RotatingTypewriter({ phrases }: { phrases: string[] }) {
   const [currentPhrase, setCurrentPhrase] = useState({
     text: phrases[0],
     isDeleting: false,
@@ -37,6 +37,6 @@ export default function RotatingTypeWriter({ phrases }: { phrases: string[] }) {
   };
 
   return (
-    <TypeWriter text={currentPhrase.text} onComplete={onComplete} isDeleting={currentPhrase.isDeleting} />
+    <Typewriter text={currentPhrase.text} onComplete={onComplete} isDeleting={currentPhrase.isDeleting} />
   );
 };
