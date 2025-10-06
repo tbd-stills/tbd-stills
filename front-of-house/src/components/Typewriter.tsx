@@ -14,7 +14,7 @@ export default function Typewriter(
 ) {
   const [currentText, setCurrentText] = useState('');
 
-  const interval = 60;
+  const interval = 30;
 
   if ((currentText === '' && !isDeleting) || (text === currentText && isDeleting)) {
     console.log('writing');
