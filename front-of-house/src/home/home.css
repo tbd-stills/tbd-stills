@@ -1,16 +1,47 @@
 .home-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .cover {
-  width: 100%;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
   height: 100%;
   position: fixed;
+  width: 100%;
   z-index: -1;
+}
+
+.television-container {
+  transition: width 0.8s, max-height 1s, opacity 2s;
+  overflow: hidden;
+}
+
+.home-television-wrapper {
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.home-television-wrapper.tv-hidden {
+  .television-container {
+    max-height: 0;
+    opacity: 0;
+  }
+
+}
+
+video {
+  max-width: 500px;
+  width: 100%;
 }

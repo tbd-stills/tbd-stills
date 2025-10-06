@@ -19,7 +19,6 @@ export default function RotatingTypeWriter({ phrases }: { phrases: string[] }) {
     text: phrases[0],
     isDeleting: false,
   });
-  console.log('starting rotating typewriter', currentPhrase);
   // continuously iterate through the phrases
   // 1. Start the first phrase in a typewriter
   // 2. when the first word is complete, start deleting it

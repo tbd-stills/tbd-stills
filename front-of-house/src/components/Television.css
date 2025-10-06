@@ -1,14 +1,18 @@
 .television-container {
   position: relative;
+  height: auto;
+  max-height: 360px;
   max-width: 600px;
+  width: 100%;
 
   .television {
     width: 100%;
   }
 
   .television-content {
+    padding: 7%;
     position: absolute;
     top: 0;
-    padding: 10%;
+    z-index: -1;
   }
 }
