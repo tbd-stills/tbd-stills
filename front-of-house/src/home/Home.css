@@ -1,3 +1,7 @@
+p {
+  min-height: 20px;
+}
+
 .home-container {
   align-items: center;
   color: white;
@@ -9,23 +13,26 @@
 }
 
 .cover {
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -webkit-filter: blur(25px);
+  filter: blur(25px);
+  transform: scale(1.05);
   height: 100%;
   position: fixed;
   width: 100%;
   z-index: -1;
-  transition: -webkit-filter 2s, filter 2s;
+  transition: -webkit-filter 2s, filter 2s, transform 2s;
 }
 
 .cover.unblur {
   -webkit-filter: blur(0);
   filter: blur(0);
+  transform: scale(1);
 }
 
 .television-container {
   transition: width 0.8s, max-height 1s, opacity 2s;
   overflow: hidden;
+  margin: 0 20px 0 20px;
 }
 
 .home-television-wrapper {

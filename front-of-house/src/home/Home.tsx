@@ -19,10 +19,8 @@ function Home() {
     }, 8000);
     setTimeout(function () {
       setIsTypewriterHidden(false);
-    }, 10000);
-    setTimeout(function () {
       setAnimationIsOngoing(false);
-    }, 12000);
+    }, 10000);
   }
 
   return (
